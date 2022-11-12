@@ -5,4 +5,8 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="GeoJSON.Net" Version="1.2.19" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	</ItemGroup>
 </Project>

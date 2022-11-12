@@ -1,4 +1,6 @@
-﻿namespace Iida.Shared.Requests;
+﻿using GeoJSON.Net.Feature;
+
+namespace Iida.Shared.Requests;
 
 /// <summary>
 /// Order request.
@@ -7,7 +9,7 @@ public class Order {
 	/// <summary>
 	/// GeoJSON polygon of the crop.
 	/// </summary>
-	public string? GeoJsonString { get; set; }
+	public FeatureCollection? FeatureCollection { get; set; }
 	/// <summary>
 	/// Request start date.
 	/// </summary>
