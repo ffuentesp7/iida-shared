@@ -8,7 +8,7 @@ public class GoogleCloudStorage {
 	private readonly StorageClient _storageClient;
 	private readonly string? _bucketName;
 	public GoogleCloudStorage(Parameters parameters) {
-		_googleCredential = GoogleCredential.FromJson(parameters.CredentialFile);
+		_googleCredential = GoogleCredential.FromFile(parameters.CredentialFile);
 		_storageClient = StorageClient.Create(_googleCredential);
 		_bucketName = parameters.StorageBucket;
 	}
