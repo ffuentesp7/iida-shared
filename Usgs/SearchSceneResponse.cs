@@ -2,11 +2,11 @@
 
 public class SearchSceneResponse {
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public int requestId { get; set; }
+	public int? requestId { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
 	public string? version { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public int sessionId { get; set; }
+	public int? sessionId { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
 	public Data? data { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
@@ -19,19 +19,19 @@ public class Data {
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
 	public Result?[]? results { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public int recordsReturned { get; set; }
+	public int? recordsReturned { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public int totalHits { get; set; }
+	public int? totalHits { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
 	public string? totalHitsAccuracy { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public bool isCustomized { get; set; }
+	public bool? isCustomized { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public int numExcluded { get; set; }
+	public int? numExcluded { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public int startingNumber { get; set; }
+	public int? startingNumber { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public int nextRecord { get; set; }
+	public int? nextRecord { get; set; }
 }
 
 public class Result {
@@ -65,22 +65,22 @@ public class Result {
 
 public class Options {
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public bool bulk { get; set; }
+	public bool? bulk { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public bool download { get; set; }
+	public bool? download { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public bool order { get; set; }
+	public bool? order { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public bool secondary { get; set; }
+	public bool? secondary { get; set; }
 }
 
 public class Selected {
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public bool bulk { get; set; }
+	public bool? bulk { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public bool compare { get; set; }
+	public bool? compare { get; set; }
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "USGS JSON parsing")]
-	public bool order { get; set; }
+	public bool? order { get; set; }
 }
 
 public class Spatialbounds {
