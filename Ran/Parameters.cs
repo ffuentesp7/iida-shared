@@ -1,4 +1,4 @@
-﻿namespace Iida.Shared.Agromet;
+﻿namespace Iida.Shared.Ran;
 
 public class Parameters : Configuration {
 	public string? Api { get; set; }
