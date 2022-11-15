@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 namespace Iida.Shared.DataTransferObjects;
 
 [JsonObject]
-public class Result {
+public abstract class Result {
 	[JsonProperty("guid"), Required]
 	public Guid? Guid { get; set; }
 	[JsonProperty("result_date"), Required]

@@ -19,10 +19,10 @@ public class Order {
 	[JsonProperty("cloud_cover"), Required]
 	public double CloudCover { get; set; }
 	[JsonProperty("evapotranspiration_maps"), Required]
-	public virtual ICollection<EvapotranspirationMap>? EvapotranspirationMaps { get; set; }
+	public virtual ICollection<EvapotranspirationMap>? EvapotranspirationMaps { get; set; } = new HashSet<EvapotranspirationMap>();
 	[JsonProperty("meteorological_data"), Required]
-	public virtual ICollection<MeteorologicalData>? MeteorologicalDatas { get; set; }
+	public virtual ICollection<MeteorologicalData>? MeteorologicalDatas { get; set; } = new HashSet<MeteorologicalData>();
 	[JsonProperty("satellite_images"), Required]
-	public virtual ICollection<SatelliteImage>? SatelliteImages { get; set; }
+	public virtual ICollection<SatelliteImage>? SatelliteImages { get; set; } = new HashSet<SatelliteImage>();
 
 }

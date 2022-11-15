@@ -20,11 +20,11 @@ public class Order {
 	[Column("cloud_cover", Order = 6), Required]
 	public double CloudCover { get; set; }
 	[Column("eta_maps_fk", Order = 7)]
-	public virtual ICollection<EvapotranspirationMap>? EvapotranspirationMaps { get; set; }
+	public virtual ICollection<EvapotranspirationMap>? EvapotranspirationMaps { get; set; } = new HashSet<EvapotranspirationMap>();
 	[Column("meteo_data_fk", Order = 8)]
-	public virtual ICollection<MeteorologicalData>? MeteorologicalDatas { get; set; }
+	public virtual ICollection<MeteorologicalData>? MeteorologicalDatas { get; set; } = new HashSet<MeteorologicalData>();
 	[Column("sat_img_fk", Order = 9)]
-	public virtual ICollection<SatelliteImage>? SatelliteImages { get; set; }
+	public virtual ICollection<SatelliteImage>? SatelliteImages { get; set; } = new HashSet<SatelliteImage>();
 	[Column("version", Order = 9), ConcurrencyCheck]
 	public Guid Version { get; set; }
 }
