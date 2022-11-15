@@ -12,9 +12,9 @@ public class Order {
 	[Column("timestamp", Order = 2), Required]
 	public DateTimeOffset TimeStamp { get; set; }
 	[Column("start", Order = 3), Required]
-	public DateOnly? Start { get; set; }
+	public DateTimeOffset? Start { get; set; }
 	[Column("end", Order = 4), Required]
-	public DateOnly? End { get; set; }
+	public DateTimeOffset? End { get; set; }
 	[Column("eta_maps_fk", Order = 5)]
 	public virtual ICollection<EvapotranspirationMap>? EvapotranspirationMaps { get; set; }
 	[Column("meteo_data_fk", Order = 6)]
