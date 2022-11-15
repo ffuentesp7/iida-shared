@@ -1,15 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+using GeoJSON.Net.Feature;
+
 using Newtonsoft.Json;
 
 namespace Iida.Shared.DataTransferObjects;
 
 [JsonObject]
-public class Order {
-	[JsonProperty("guid"), Required]
-	public Guid? Guid { get; set; }
-	[JsonProperty("status"), Required]
-	public string? Status { get; set; }
+public class QueueRequest {
+	[JsonProperty("geojson"), Required]
+	public FeatureCollection? GeoJson { get; set; }
 	[JsonProperty("timestamp"), Required]
 	public DateTimeOffset? Timestamp { get; set; }
 	[JsonProperty("start_date"), Required]
@@ -18,8 +18,6 @@ public class Order {
 	public DateTimeOffset? End { get; set; }
 	[JsonProperty("cloud_cover"), Required]
 	public double CloudCover { get; set; }
-	[JsonProperty("actual_evapotranspiration_maps"), Required]
-	public virtual ICollection<EvapotranspirationMap>? EvapotranspirationMaps { get; set; }
-	[JsonProperty("meteorological_data"), Required]
-	public virtual ICollection<MeteorologicalData>? MeteorologicalDatas { get; set; }
+	[JsonProperty("guid"), Required]
+	public Guid Guid { get; set; }
 }

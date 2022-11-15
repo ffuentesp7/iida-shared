@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 
 namespace Iida.Shared.DataTransferObjects;
 
+[JsonObject]
 public class Request {
 	[JsonProperty("geojson"), Required]
 	public FeatureCollection? GeoJson { get; set; }
