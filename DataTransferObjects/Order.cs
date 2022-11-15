@@ -1,17 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-using GeoJSON.Net.Feature;
-
 namespace Iida.Shared.DataTransferObjects;
 
 public class Order {
 	[JsonPropertyOrder(0), JsonPropertyName("guid"), Required]
 	public Guid? Guid { get; set; }
-	[JsonPropertyOrder(1), JsonPropertyName("timestamp"), Required]
+	[JsonPropertyOrder(1), JsonPropertyName("status"), Required]
+	public string? Status { get; set; }
+	[JsonPropertyOrder(2), JsonPropertyName("timestamp"), Required]
 	public DateTimeOffset? Timestamp { get; set; }
-	[JsonPropertyOrder(2), JsonPropertyName("geojson"), Required]
-	public FeatureCollection? GeoJson { get; set; }
 	[JsonPropertyOrder(3), JsonPropertyName("start_date"), Required]
 	public DateTimeOffset? Start { get; set; }
 	[JsonPropertyOrder(4), JsonPropertyName("end_date"), Required]

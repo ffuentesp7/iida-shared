@@ -14,6 +14,6 @@ public abstract class Result {
 	public string? Url { get; set; }
 	[Column("order_fk", Order = 4), Required]
 	public virtual Order? Order { get; set; }
-	[Column("version"), ConcurrencyCheck]
+	[Column("version", Order = 5), ConcurrencyCheck]
 	public Guid Version { get; set; }
 }

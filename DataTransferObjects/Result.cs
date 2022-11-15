@@ -8,6 +8,6 @@ public class Result {
 	public Guid? Guid { get; set; }
 	[JsonPropertyOrder(1), JsonPropertyName("result_date"), Required]
 	public DateTimeOffset? Timestamp { get; set; }
-	[JsonPropertyOrder(0), JsonPropertyName("url"), Required]
+	[JsonPropertyOrder(2), JsonPropertyName("url"), Required]
 	public string? Url { get; set; }
 }

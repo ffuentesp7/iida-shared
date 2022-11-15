@@ -9,18 +9,20 @@ public class Order {
 	public int Id { get; set; }
 	[Column("guid", Order = 1), Required]
 	public Guid Guid { get; set; }
-	[Column("timestamp", Order = 2), Required]
+	[Column("status", Order = 2), Required]
+	public string? Status { get; set; }
+	[Column("timestamp", Order = 3), Required]
 	public DateTimeOffset Timestamp { get; set; }
-	[Column("start", Order = 3), Required]
+	[Column("start", Order = 4), Required]
 	public DateTimeOffset? Start { get; set; }
-	[Column("end", Order = 4), Required]
+	[Column("end", Order = 5), Required]
 	public DateTimeOffset? End { get; set; }
-	[Column("cloud_cover", Order = 5), Required]
+	[Column("cloud_cover", Order = 6), Required]
 	public string? CloudCover { get; set; }
-	[Column("eta_maps_fk", Order = 6)]
+	[Column("eta_maps_fk", Order = 7)]
 	public virtual ICollection<EvapotranspirationMap>? EvapotranspirationMaps { get; set; }
-	[Column("meteo_data_fk", Order = 7)]
+	[Column("meteo_data_fk", Order = 8)]
 	public virtual ICollection<MeteorologicalData>? MeteorologicalDatas { get; set; }
-	[Column("version"), ConcurrencyCheck]
+	[Column("version", Order = 9), ConcurrencyCheck]
 	public Guid Version { get; set; }
 }
