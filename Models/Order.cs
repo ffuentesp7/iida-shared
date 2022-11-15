@@ -10,7 +10,7 @@ public class Order {
 	[Column("guid", Order = 1), Required]
 	public Guid Guid { get; set; }
 	[Column("timestamp", Order = 2), Required]
-	public DateTimeOffset TimeStamp { get; set; }
+	public DateTimeOffset Timestamp { get; set; }
 	[Column("start", Order = 3), Required]
 	public DateTimeOffset? Start { get; set; }
 	[Column("end", Order = 4), Required]

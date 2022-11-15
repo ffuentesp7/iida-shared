@@ -9,7 +9,7 @@ public abstract class Result {
 	[Column("guid", Order = 1), Required]
 	public Guid Guid { get; set; }
 	[Column("timestamp", Order = 2), Required]
-	public DateTimeOffset? TimeStamp { get; set; }
+	public DateTimeOffset? Timestamp { get; set; }
 	[Column("url", Order = 3), Required]
 	public string? Url { get; set; }
 	[Column("order_fk", Order = 4), Required]

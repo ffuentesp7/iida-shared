@@ -9,7 +9,7 @@ public class Order {
 	[JsonPropertyOrder(0), JsonPropertyName("guid"), Required]
 	public Guid? Guid { get; set; }
 	[JsonPropertyOrder(1), JsonPropertyName("timestamp"), Required]
-	public DateTimeOffset? TimeStamp { get; set; }
+	public DateTimeOffset? Timestamp { get; set; }
 	[JsonPropertyOrder(2), JsonPropertyName("geojson"), Required]
 	public FeatureCollection? GeoJson { get; set; }
 	[JsonPropertyOrder(3), JsonPropertyName("start_date"), Required]
