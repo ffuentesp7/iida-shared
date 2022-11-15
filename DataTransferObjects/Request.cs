@@ -1,17 +1,20 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
 
 using GeoJSON.Net.Feature;
+
+using Newtonsoft.Json;
 
 namespace Iida.Shared.DataTransferObjects;
 
 public class Request {
-	[JsonPropertyOrder(0), JsonPropertyName("geojson"), Required]
+	[JsonProperty("geojson"), Required]
 	public FeatureCollection? GeoJson { get; set; }
-	[JsonPropertyOrder(1), JsonPropertyName("start_date"), Required]
+	[JsonProperty("start_date"), Required]
 	public DateTimeOffset? Start { get; set; }
-	[JsonPropertyOrder(2), JsonPropertyName("end_date"), Required]
+	[JsonProperty("end_date"), Required]
 	public DateTimeOffset? End { get; set; }
-	[JsonPropertyOrder(3), JsonPropertyName("cloud_cover"), Required]
-	public string? CloudCover { get; set; }
+	[JsonProperty("cloud_cover"), Required]
+	public double CloudCover { get; set; }
+	[JsonIgnore]
+	public Guid Guid { get; set; }
 }

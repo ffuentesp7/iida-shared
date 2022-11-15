@@ -1,13 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
+
+using Newtonsoft.Json;
 
 namespace Iida.Shared.DataTransferObjects;
 
 public class Result {
-	[JsonPropertyOrder(0), JsonPropertyName("guid"), Required]
+	[JsonProperty("guid"), Required]
 	public Guid? Guid { get; set; }
-	[JsonPropertyOrder(1), JsonPropertyName("result_date"), Required]
+	[JsonProperty("result_date"), Required]
 	public DateTimeOffset? Timestamp { get; set; }
-	[JsonPropertyOrder(2), JsonPropertyName("url"), Required]
+	[JsonProperty("url"), Required]
 	public string? Url { get; set; }
 }

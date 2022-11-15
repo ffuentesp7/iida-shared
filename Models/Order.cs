@@ -18,7 +18,7 @@ public class Order {
 	[Column("end", Order = 5), Required]
 	public DateTimeOffset? End { get; set; }
 	[Column("cloud_cover", Order = 6), Required]
-	public string? CloudCover { get; set; }
+	public double CloudCover { get; set; }
 	[Column("eta_maps_fk", Order = 7)]
 	public virtual ICollection<EvapotranspirationMap>? EvapotranspirationMaps { get; set; }
 	[Column("meteo_data_fk", Order = 8)]

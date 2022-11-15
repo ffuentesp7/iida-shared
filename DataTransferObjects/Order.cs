@@ -1,23 +1,24 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
+
+using Newtonsoft.Json;
 
 namespace Iida.Shared.DataTransferObjects;
 
 public class Order {
-	[JsonPropertyOrder(0), JsonPropertyName("guid"), Required]
+	[JsonProperty("guid"), Required]
 	public Guid? Guid { get; set; }
-	[JsonPropertyOrder(1), JsonPropertyName("status"), Required]
+	[JsonProperty("status"), Required]
 	public string? Status { get; set; }
-	[JsonPropertyOrder(2), JsonPropertyName("timestamp"), Required]
+	[JsonProperty("timestamp"), Required]
 	public DateTimeOffset? Timestamp { get; set; }
-	[JsonPropertyOrder(3), JsonPropertyName("start_date"), Required]
+	[JsonProperty("start_date"), Required]
 	public DateTimeOffset? Start { get; set; }
-	[JsonPropertyOrder(4), JsonPropertyName("end_date"), Required]
+	[JsonProperty("end_date"), Required]
 	public DateTimeOffset? End { get; set; }
-	[JsonPropertyOrder(5), JsonPropertyName("cloud_cover"), Required]
-	public string? CloudCover { get; set; }
-	[JsonPropertyOrder(6), JsonPropertyName("actual_evapotranspiration_maps"), Required]
+	[JsonProperty("cloud_cover"), Required]
+	public double CloudCover { get; set; }
+	[JsonProperty("actual_evapotranspiration_maps"), Required]
 	public virtual ICollection<EvapotranspirationMap>? EvapotranspirationMaps { get; set; }
-	[JsonPropertyOrder(7), JsonPropertyName("meteorological_data"), Required]
+	[JsonProperty("meteorological_data"), Required]
 	public virtual ICollection<MeteorologicalData>? MeteorologicalDatas { get; set; }
 }
