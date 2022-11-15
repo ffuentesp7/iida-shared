@@ -1,4 +1,4 @@
-﻿namespace Iida.Shared.Ran;
+﻿namespace Iida.Shared.RanForIidaR;
 
 public class Parameters : Configuration {
 	public string? Api { get; set; }
