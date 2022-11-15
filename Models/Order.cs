@@ -23,6 +23,8 @@ public class Order {
 	public virtual ICollection<EvapotranspirationMap>? EvapotranspirationMaps { get; set; }
 	[Column("meteo_data_fk", Order = 8)]
 	public virtual ICollection<MeteorologicalData>? MeteorologicalDatas { get; set; }
+	[Column("sat_img_fk", Order = 9)]
+	public virtual ICollection<SatelliteImage>? SatelliteImages { get; set; }
 	[Column("version", Order = 9), ConcurrencyCheck]
 	public Guid Version { get; set; }
 }

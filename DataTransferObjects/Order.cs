@@ -18,8 +18,11 @@ public class Order {
 	public DateTimeOffset? End { get; set; }
 	[JsonProperty("cloud_cover"), Required]
 	public double CloudCover { get; set; }
-	[JsonProperty("actual_evapotranspiration_maps"), Required]
+	[JsonProperty("evapotranspiration_maps"), Required]
 	public virtual ICollection<EvapotranspirationMap>? EvapotranspirationMaps { get; set; }
 	[JsonProperty("meteorological_data"), Required]
 	public virtual ICollection<MeteorologicalData>? MeteorologicalDatas { get; set; }
+	[JsonProperty("satellite_images"), Required]
+	public virtual ICollection<SatelliteImage>? SatelliteImages { get; set; }
+
 }
